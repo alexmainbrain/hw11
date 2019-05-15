@@ -4,7 +4,6 @@ class Fibonacci {
     this.currentNumber = 1;
     this.counter()
   }
-  
   counter() {
     let previousNumber = 1;
     let i = 3;
@@ -17,33 +16,27 @@ class Fibonacci {
     return this.currentNumber;
   }
 }
-
 class Iterator{
     constructor(currentValue){
         this.currentValue = currentValue;
     }
-
-    current(){
+ current(){
         const fibonacci = new Fibonacci(this.currentValue)
         return `Current fibonacci number: ${fibonacci.currentNumber}`;
     }
-
-    next(){
+next(){
         const fibonacci = new Fibonacci(this.currentValue + 1)
         return `Next fibonacci number: ${fibonacci.currentNumber}`;
     }
-
-    prev(){
+prev(){
         const fibonacci = new Fibonacci(this.currentValue - 1)
         return `Previous fibonacci number: ${fibonacci.currentNumber}`;
     }
-
-    key(){
+key(){
         const fibonacci = new Fibonacci(this.currentValue)
         return `Current fibonacci index: ${fibonacci.index}`;
     }
-
-    rewind(){
+rewind(){
         this.currentValue = 0;
         const fibonacci = new Fibonacci(this.currentValue);
         return `Current fibonacci number: ${fibonacci.currentNumber}`;
